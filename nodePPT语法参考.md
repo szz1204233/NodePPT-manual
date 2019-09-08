@@ -22,7 +22,8 @@
 
 ### 编译及运行
 
-使用`nodeppt build <filename.md>`以编译产出md文件。生成dir文件夹包括使用资源，可打开其中`filename.html`文件以放映幻灯片。放映时可于浏览器地址栏附加参数`?mode=speaker`启用演讲者模式
+使用`nodeppt build <filename.md>`以编译产出md文件。生成的dist文件夹中包括使用资源、样式等内容，可使用浏览器打开`filename.html`文件以放映幻灯片。  
+放映时，可于浏览器地址栏中本地Url后附加参数`?mode=speaker`启用演讲者模式
 
 ## 语法
 
