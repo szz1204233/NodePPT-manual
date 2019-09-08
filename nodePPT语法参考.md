@@ -10,7 +10,7 @@
 
 ### 特有语法
 
-1. 配置
+1. 配置部分
 ```yaml
 title: How to make PPT
 speaker: 
@@ -18,4 +18,4 @@ plugins:
     - echarts
 ```
 
-2. 内容
+2. 内容部分
