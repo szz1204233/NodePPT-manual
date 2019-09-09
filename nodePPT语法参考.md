@@ -29,6 +29,33 @@
 
 ### Markdown简要语法
 
+> `# `一级标题、`## `二级标题……以此类推，可至六级标题；  
+> 
+> `1. `有序列表；`- `、`+ `、`* `无序列表；  
+> 
+> `*斜体*`、`**加粗**`、`***粗斜体***`；  
+> 
+> `[行内链接](Url)`；  
+> 
+> ```md
+> [链接文字](id)  
+> [id]: Url
+> ```  
+> 
+> `[引用存储文件](../fileaddress)`；  
+> 
+> ```
+> `行内代码`
+> ```    
+> 
+> ```md
+>     ```html
+>     代码块
+>     ```
+> ```  
+> 
+> `> `引用；  
+
 ### 特有语法
 
 1. 配置部分
@@ -41,3 +68,9 @@
 
 1. npm更新后，使用`npm -v`版本显示仍为更新前版本：考虑添加系统环境变量  
 > Anyway, the fix is simple: I just copied the first path (to npm) just before the path to node in the main, global Path variable, and now it picks up the latest version.  
+
+
+### 参考资料
+
+- [nodeppt2.0 README.md](https://github.com/ksky521/nodeppt/blob/master/README.md)
+- [Markdown语法快速入门手册](https://www.w3cschool.cn/markdownyfsm/markdownyfsm-odm6256r.html)
