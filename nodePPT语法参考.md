@@ -27,13 +27,65 @@
 
 ## 语法
 
-### 特有语法
-
 1. 配置部分
+生成文件后，文件头部为幻灯片信息，样例如下：  
+```yaml
+title: nodeppt markdown 演示
+speaker: 三水清
+url: https://github.com/ksky521/nodeppt
+js:
+    - https://www.echartsjs.com/asset/theme/shine.js
+prismTheme: solarizedlight
+plugins:
+    - echarts
+    - mermaid
+    - katex
+```
+各字段对应为
+- title: 演讲主题
+- speaker：演讲者
+- url：地址
+- js：js 文件数组，放到 body 之前
+- css：css 文件数组，放到头部
+- prismTheme：prism 配色，可选参数为 ['dark', 'coy', 'funky', 'okaidia', 'tomorrow', 'solarizedlight', 'twilight']
+- plugins：目前支持 echarts、mermaid 和 katex 三个插件
 
 2. 内容部分
+    1. 分页
+    2. 插入图片（image）
+       1. 背景图片
+       2. 图片增强
+    3. 插入图标（icon）及按钮（button）
+    4. 插入图表
+    5. 插入流程图
+    6. 插入数学符号
+    7. 设计样式（classes）
+    8. 设计布局（layout）
+    9. 添加动效（animation）
 
 3. 其他
+    1. 高级语法
+       1. attribute
+       2. `:::`
+       3. span
+
+    2. 插件说明
+       1. echarts（图表）
+       2. mermaid（流程图）
+       3. katex（数学符号）
+
+## 开发相关
+
+### 插件制作说明
+
+### 模板制作说明
+
+## 反馈
+
+### 常见问题
+
+- 问:如何导出PDF？  答:使用浏览器打印幻灯片即可（快捷键`ctrl + P`/`command + P`）
+
 
 ### 故障排除手册
 
@@ -41,6 +93,6 @@
 > Anyway, the fix is simple: I just copied the first path (to npm) just before the path to node in the main, global Path variable, and now it picks up the latest version.  
 
 
-### 参考资料
+## 参考资料
 
 - [nodeppt2.0 README.md](https://github.com/ksky521/nodeppt/blob/master/README.md)
