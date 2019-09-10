@@ -27,7 +27,7 @@
 
 ## 语法
 
-1. 配置部分
+1. 配置部分  
 生成文件后，文件头部为幻灯片信息，样例如下：  
 ```yaml
 title: nodeppt markdown 演示
@@ -90,9 +90,30 @@ plugins:
 ### 故障排除手册
 
 1. npm更新后，使用`npm -v`版本显示仍为更新前版本：考虑添加系统环境变量  
-> Anyway, the fix is simple: I just copied the first path (to npm) just before the path to node in the main, global Path variable, and now it picks up the latest version.  
+>I just installed Node.js on a new Windows 7 machine, with the following results:
+```cmd
+> node -v
+v0.12.0
+> npm -v
+2.5.1
+```
+>
+>I then did the above described procedure:
+```cmd
+> npm install -g npm
+```
+>
+>and it upgraded to v2.7.3. Except than doing npm -v still gave 2.5.1.
+>
+>I went to the System configuration panel, advanced settings, environment variables. I saw a PATH variable specific to my user account, in addition to the global Path variable.
+The former pointed to new npm: C:UsersPhiLhoAppDataRoamingnpm
+The latter includes the path to node: C:PrgCmdLinenodejs (Nowadays, I avoid to install stuff in Program Files and derivates. Avoiding spaces in paths, and noisy useless protections is saner...)
+If I do which npm.cmd (I have Unix utilities installed...), it points to the one in Node.
+>
+>Anyway, the fix is simple: I just copied the first path (to npm) just before the path to node in the main, global Path variable, and now it picks up the latest version.
 
 
 ## 参考资料
 
 - [nodeppt2.0 README.md](https://github.com/ksky521/nodeppt/blob/master/README.md)
+- [How can I update NodeJS and NPM to the next versions?](https://stackoverflow.com/a/29196342)
